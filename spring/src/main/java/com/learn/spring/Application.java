@@ -14,7 +14,7 @@ public class Application {
 	Logger logger = LoggerFactory.getLogger(ILoggerFactory.class);
 	@RequestMapping("/hello")
 	String handleRequest() {
-		logger.trace("\nProcessing handle request");
+		logger.debug("\nHandleRequest::Processing request");
 		return "hello world!";
 	}
 	public static void main(String[] args) {
