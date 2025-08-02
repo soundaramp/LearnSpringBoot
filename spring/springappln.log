@@ -1,0 +1,8 @@
+2025-08-02T11:23:30.764+05:30  INFO 16216 --- [spring] [main] com.learn.spring.Application             : Starting Application using Java 24.0.1 with PID 16216 (C:\Users\kathi\OneDrive\Documents\GitHub\LearnSpringBoot\spring\target\classes started by kathi in C:\Users\kathi\OneDrive\Documents\GitHub\LearnSpringBoot\spring)
+2025-08-02T11:23:30.772+05:30 DEBUG 16216 --- [spring] [main] com.learn.spring.Application             : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-02T11:23:30.776+05:30  INFO 16216 --- [spring] [main] com.learn.spring.Application             : No active profile set, falling back to 1 default profile: "default"
+2025-08-02T11:23:36.023+05:30  INFO 16216 --- [spring] [main] com.learn.spring.Application             : Started Application in 7.319 seconds (process running for 8.759)
+2025-08-02T11:26:54.676+05:30  INFO 23800 --- [spring] [main] com.learn.spring.Application             : Starting Application using Java 24.0.1 with PID 23800 (C:\Users\kathi\OneDrive\Documents\GitHub\LearnSpringBoot\spring\target\classes started by kathi in C:\Users\kathi\OneDrive\Documents\GitHub\LearnSpringBoot\spring)
+2025-08-02T11:26:54.684+05:30 DEBUG 23800 --- [spring] [main] com.learn.spring.Application             : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-02T11:26:54.687+05:30  INFO 23800 --- [spring] [main] com.learn.spring.Application             : No active profile set, falling back to 1 default profile: "default"
+2025-08-02T11:26:59.875+05:30  INFO 23800 --- [spring] [main] com.learn.spring.Application             : Started Application in 7.25 seconds (process running for 8.838)
