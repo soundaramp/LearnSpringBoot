@@ -1,6 +1,5 @@
 package com.learn.spring.configuration;
 
-import com.learn.spring.service.StudentService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,8 +10,8 @@ public class config {
         System.out.println("test bean");
         return "test bean";
     }
-    @Bean
-    public StudentService getStudentService() {
-        return new StudentService("Test",12);
-    }
+//    @Bean
+//    public StudentService getStudentService() {
+//        return new StudentService("Test",12);
+//    }
 }
