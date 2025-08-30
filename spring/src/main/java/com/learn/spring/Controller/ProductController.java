@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/products")
 public class ProductController {
     Logger logger = LoggerFactory.getLogger(ILoggerFactory.class);
 
@@ -21,9 +21,8 @@ public class ProductController {
     private ProductService productService;
 
     @PostMapping("/add")
-    @ResponseBody
     public Product addProduct(@RequestBody Product product) {
-        return productService.saveProduct(product);
+        return productService.addProduct(product);
     }
 
     @PutMapping("/{id}")

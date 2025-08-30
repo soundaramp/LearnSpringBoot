@@ -14,17 +14,22 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    @Override
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
 
+    @Override
     public Optional<Product> getProductById(Long id) {
         return productRepository.findById(id);
     }
 
-    public Product saveProduct(Product product) {
+    @Override
+    public Product addProduct(Product product) {
         return productRepository.save(product);
     }
+
+    @Override
     public Product updateProduct(Long id, Product updateProduct) {
         return productRepository.findById(id).map(product -> {
             product.setName(updateProduct.getName());
@@ -33,6 +38,7 @@ public class ProductServiceImpl implements ProductService {
             return productRepository.save(product);
         }).orElseThrow(()-> new RuntimeException("Product is not found with id "+id));
     }
+    @Override
     public void deleteProduct(Long id) {
         productRepository.deleteById(id);
     }

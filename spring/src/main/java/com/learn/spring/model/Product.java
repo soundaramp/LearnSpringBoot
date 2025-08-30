@@ -1,4 +1,5 @@
 package com.learn.spring.model;
+
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -9,15 +10,29 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name="employee_details")
+@Table(name = "employee_details")
 public class Product {
-            @Id
-            private Long id;
-            @Nonnull
-            private String name;
-            private double price;
-            private int productCount;
-            private boolean availability;
+    @Id
+    private Long id;
+    private String name;
+    private double price;
+
+
+    private int productCount;
+    private boolean availability;
+
+    public Product() {
+
+    }
+
+    public Product(Long id, String name, double price, int productCount) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.productCount = productCount;
+        this.availability = false;
+    }
+
 
     @Override
     public String toString() {
