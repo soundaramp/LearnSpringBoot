@@ -30,6 +30,7 @@ public class ReviewServiceImpl implements ReviewService {
         return reviewEntity;
     }
 
+
     public List<BookReviewPojo> convertToBookReviewPojo(List<ReviewEntity> reviewEntityList) {
         List<BookReviewPojo> bookReviewPojoList = new ArrayList<>();
         for (ReviewEntity reviewEntity: reviewEntityList) {
@@ -52,6 +53,7 @@ public class ReviewServiceImpl implements ReviewService {
     public ReviewEntity addReview(ReviewPojo reviewPojo) {
         BookEntity bookEntity = bookRepo.findById(reviewPojo.getBookId())
                 .orElseThrow(() -> new RuntimeException("Book not found"));
+
         ReviewEntity reviewEntity =convertToReviewEntity(reviewPojo);
         reviewEntity.setBookEntity(bookEntity);
         return reviewRepo.save(reviewEntity);

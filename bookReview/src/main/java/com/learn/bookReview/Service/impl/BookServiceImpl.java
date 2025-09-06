@@ -1,20 +1,14 @@
 package com.learn.bookReview.Service.impl;
 
-import com.learn.bookReview.BookReviewApplication;
 import com.learn.bookReview.Entity.BookEntity;
-import com.learn.bookReview.Entity.ReviewEntity;
-import com.learn.bookReview.Enums.Genre;
 import com.learn.bookReview.POJO.BookPojo;
-import com.learn.bookReview.POJO.BookReviewPojo;
 import com.learn.bookReview.Repository.BookRepo;
 import com.learn.bookReview.Service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Book;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -30,6 +24,11 @@ public class BookServiceImpl implements BookService {
         bookEntity.setGenre(bookPojo.getGenre());
         bookEntity.setPublishedDate(new Date());
         return bookEntity;
+    }
+
+    public Optional<BookEntity> getABookWithReviews(Long bookId) {
+        return bookRepo.findById(bookId);
+
     }
 
     public BookEntity addBook(BookPojo bookPojo) throws Exception {

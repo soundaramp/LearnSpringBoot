@@ -31,6 +31,15 @@ public class BookEntity {
     @OneToMany(mappedBy = "bookEntity", cascade = CascadeType.ALL)
     List<ReviewEntity> reviewEntityList;
 
+    
+    public List<ReviewEntity> getReviewEntityList() {
+        return reviewEntityList;
+    }
+
+    public void setReviewEntityList(List<ReviewEntity> reviewEntityList) {
+        this.reviewEntityList = reviewEntityList;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -70,4 +79,6 @@ public class BookEntity {
     public Genre getGenre() {
         return genre;
     }
+
+
 }

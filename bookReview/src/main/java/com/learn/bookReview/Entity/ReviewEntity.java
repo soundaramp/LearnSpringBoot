@@ -9,6 +9,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Table(name="reviews")
 public class ReviewEntity {
     @Id
+    @GeneratedValue
     @Column(name="review_id")
     @Min(1)
     private long id;
@@ -19,8 +20,9 @@ public class ReviewEntity {
     @NotBlank(message="reviewerName can not be blank")
     private String reviewerName;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name="book_id", nullable = false)
+    @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
+   // @JoinColumn(name="book_id", referencedColumnName = "book_id")
+    @JoinColumn(name = "book_id", nullable = false)
     private BookEntity bookEntity;
 
     public BookEntity getBookEntity() {
